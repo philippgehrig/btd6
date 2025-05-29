@@ -1,0 +1,75 @@
+{
+  "moneyPerGame": 176,
+  "towers": {
+    "bomb": {
+      "hotkey": "e",
+      "coords": [720, 400],
+      "name": "bomb"
+    },
+    "boomerrang": {
+      "hotkey": "w",
+      "coords": [570, 480],
+      "name": "Boomerang Monkey"
+    },
+    "dart": {
+      "hotkey": "q",
+      "coords": [590, 610],
+      "name": "Dart Monkey"
+    },
+    "sub": {
+      "hotkey": "x",
+      "coords": [1090, 430],
+      "name": "Monkey Sub"
+    },
+    "sub2": {
+      "hotkey": "x",
+      "coords": [1200, 420],
+      "name": "Monkey Sub"
+    },
+    "engineer1": {
+      "hotkey": "l",
+      "coords": [720, 800],
+      "name": "Engineer Monkey"
+    },
+    "engineer2": {
+      "hotkey": "l",
+      "coords": [720, 700],
+      "name": "Engineer Monkey"
+    },
+    "spike": {
+      "hotkey": "j",
+      "coords": [1550, 600],
+      "name": "Spike Factory"
+    }
+  },
+  "instructions": {
+    "3": [
+      "sleep 1",
+      "start",
+      "sleep 1",
+      "place boomerrang",
+      "place dart",
+      "sleep 1",
+      "upgrade dart 0-0-2",
+      "upgrade boomerrang 0-0-1"
+    ],
+    "4": ["place sub"],
+    "8": ["upgrade sub 2-0-0"],
+    "11": ["upgrade sub 2-0-1"],
+    "12": ["upgrade boomerrang 0-0-2"],
+    "16": ["upgrade sub 2-0-2"],
+    "21": ["upgrade sub 2-0-3"],
+    "29": ["upgrade sub 2-0-4"],
+    "31": ["upgrade boomerrang 2-0-2"],
+    "34": ["upgrade dart 0-2-3"],
+    "36": ["upgrade dart 0-2-4"],
+    "38": ["upgrade boomerrang 3-0-2"],
+    "39": ["upgrade boomerrang 4-0-2"],
+    "52": ["upgrade dart 0-2-5"],
+    "60": ["place bomb"],
+    "61": ["upgrade bomb 2-0-4", "place sub2", "upgrade sub2 2-0-4"],
+    "73": ["upgrade bomb 2-0-5"],
+    "75": ["place spike", "upgrade spike 4-2-0"],
+    "80": ["restart"]
+  }
+}

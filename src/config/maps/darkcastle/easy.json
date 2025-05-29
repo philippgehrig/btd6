@@ -1,0 +1,47 @@
+{
+  "moneyPerGame": 60,
+  "towers": {
+    "bomb": {
+      "hotkey": "e",
+      "coords": [570, 480],
+      "name": "bomb"
+    },
+    "boomerrang": {
+      "hotkey": "w",
+      "coords": [570, 480],
+      "name": "Boomerang Monkey"
+    },
+    "dart": {
+      "hotkey": "q",
+      "coords": [590, 610],
+      "name": "Dart Monkey"
+    },
+    "sub": {
+      "hotkey": "x",
+      "coords": [1090, 430],
+      "name": "Monkey Sub"
+    }
+  },
+  "instructions": {
+    "1": [
+      "start",
+      "sleep 1",
+      "place boomerrang",
+      "place dart",
+      "sleep 1",
+      "upgrade dart 0-0-2",
+      "upgrade boomerrang 0-0-2"
+    ],
+    "3": ["place sub"],
+    "6": ["upgrade sub 2-0-0"],
+    "9": ["upgrade sub 2-0-1"],
+    "10": ["upgrade boomerrang 2-0-2"],
+    "14": ["upgrade sub 2-0-2"],
+    "18": ["upgrade sub 2-0-3"],
+    "28": ["upgrade sub 2-0-4"],
+    "32": ["upgrade boomerrang 4-0-2"],
+    "34": ["upgrade dart 0-2-2"],
+    "35": ["upgrade dart 0-2-4"],
+    "40": ["restart"]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "moneyPerGame": 264,
+  "towers": {
+    "bomb": {
+      "hotkey": "e",
+      "coords": [720, 400],
+      "name": "bomb"
+    },
+    "boomerrang": {
+      "hotkey": "w",
+      "coords": [570, 480],
+      "name": "Boomerang Monkey"
+    },
+    "dart": {
+      "hotkey": "q",
+      "coords": [590, 610],
+      "name": "Dart Monkey"
+    },
+    "sub": {
+      "hotkey": "x",
+      "coords": [1090, 430],
+      "name": "Monkey Sub"
+    },
+    "engineer": {
+      "hotkey": "l",
+      "coords": [720, 700],
+      "name": "Engineer Monkey"
+    },
+    "spike": {
+      "hotkey": "j",
+      "coords": [1550, 600],
+      "name": "Spike Factory"
+    },
+    "ace": {
+      "hotkey": "v",
+      "coords": [900, 300],
+      "name": "Monkey Ace"
+    },
+    "village": {
+      "hotkey": "k",
+      "coords": [900, 400],
+      "name": "Monkey Village"
+    },
+    "center": {
+      "hotkey": "",
+      "coords": [960, 540],
+      "name": "Center Click"
+    }
+  },
+  "instructions": {
+    "6": [
+      "sleep 3",
+      "place dart",
+      "place engineer",
+      "upgrade engineer 0-1-0",
+      "upgrade dart 0-2-2",
+      "start"
+    ],
+    "8": ["place sub", "upgrade sub 1-0-0"],
+    "10": ["upgrade sub 2-0-1"],
+    "11": ["upgrade dart 0-2-3"],
+    "14": ["upgrade sub 2-0-2"],
+    "16": ["upgrade engineer 0-2-2"],
+    "20": ["upgrade sub 2-0-3"],
+    "23": ["upgrade dart 0-2-4"],
+    "28": ["place bomb", "upgrade bomb 0-2-3"],
+    "31": ["upgrade bomb 0-2-4"],
+    "36": ["upgrade sub 2-0-4"],
+    "37": ["place ace", "upgrade ace 2-0-2"],
+    "41": ["place boomerrang", "upgrade boomerrang 4-0-2"],
+    "43": ["place village", "upgrade village 2-2-0"],
+    "50": ["upgrade ace 2-0-4"],
+    "62": ["place spike", "upgrade spike 2-0-4"],
+    "80": ["upgrade ace 2-0-5"],
+    "83": ["upgrade spike 2-0-5"],
+    "85": ["upgrade bomb 0-2-5"],
+    "88": ["upgrade village 2-3-0"],
+    "91": ["upgrade dart 0-2-5"],
+    "97": ["upgrade boomerrang 5-0-2", "upgrade engineer 0-2-4"],
+    "99": ["upgrade sub 2-0-5"],
+    "100": ["restart"]
+  }
+}
