@@ -1,5 +1,5 @@
 import sys
-from time import sleep
+from time import sleep, time
 from typing import Union, Optional
 
 from .Console import Console
@@ -49,10 +49,24 @@ class Game:
         map_file_path = str(self.map).lower() if hasattr(self.map, "__str__") else ""
         is_impopable = "impopable" in map_file_path
         
+        # Initialize timer for periodic level-up check
+        last_click_time = time()
+        click_interval = 30  # 3 minutes in seconds
+        currentRounds = []
+        
         if is_impopable:
             print("Detected impopable mode! Will look for insta monkey reward after round 100.")
         
         while restartInst == False:
+            # Check if it's time to click in the middle of the screen
+            current_time = time()
+            if current_time - last_click_time >= click_interval:
+                self.click_middle_screen()
+                last_click_time = current_time
+                # Update progress bar with current status
+                if currentRounds and len(currentRounds) >= 2:
+                    self.console.progress_bar(int(currentRounds[0]), int(currentRounds[1]))
+            
             currentRounds = self.get_round()
             if currentRounds != [] and currRound != currentRounds[0]:
                 currentRound = currRound = currentRounds[0]
@@ -103,7 +117,7 @@ class Game:
         print("Round 100 completed! Looking for insta monkey reward...")
         
         # First, try to detect and collect the insta monkey
-        max_attempts = 100  # Try for about 15 seconds maximum
+        max_attempts = 20  
         insta_monkey_collected = False
         
         for attempt in range(max_attempts):
@@ -242,3 +256,18 @@ class Game:
         # | Debug Image
         # image.save(f"C:\\Users\\User\\Documents\\temp.png", "PNG")
         return image
+
+    def click_middle_screen(self):
+        """
+        Clicks in the middle of the screen to handle level-up notifications or any other popup.
+        Waits 2 seconds and clicks again to ensure the popup is dismissed.
+        """
+        screen_width, screen_height = pygui.size()
+        center_x = screen_width // 2
+        center_y = screen_height // 2
+        
+        # Quietly perform the clicks without printing messages
+        pygui.moveTo(center_x, center_y)
+        pygui.click()
+        sleep(2)  # Wait 2 seconds between clicks
+        pygui.click()  # Click again to ensure the popup is dismissed
